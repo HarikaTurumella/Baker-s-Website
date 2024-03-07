@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/CSS.css">
+<link rel="stylesheet" href="css/style.css">
+
+<head>
+    <title>BLACK STONE BAKER'S</title>
+    <!-- Box Icons -->
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  
+
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <a href="index.html" class="logo">BLACK STONE BAKER'S</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <!-- Dark Mode -->
+            <div class="bx bx-moon" id="darkmode"></div>
+        </ul>
+    </header>
+    <body>
+         
+             
+        <index>
+           <div id="alerts"></div>
+           <div class="container"> 
+       <div class="productcont">
+               <div class="product">
+                   <h3 class="productname">Chocolate Fudge browine</h3>
+                   <h3>Per Box 4</h3>
+                   <p class="price">$365</p>
+                   <button class="addtocart">Add To Cart</button>
+               </div>
+               <div class="product">
+                   <h3 class="productname">Double Chocolate Chip Blondie</h3>
+                   <h3>Per Box 4</h3>
+                   <p class="price">$255</p>
+                   <button class="addtocart">Add To Cart</button>
+               </div>
+            </div>
+            <div class="container"> 
+                <div class="productcont">
+               <div class="product">
+                   <h3 class="productname">Vegan Fudge Browine</h3>
+                   <h3>Per Box 4</h3>
+                   <p class="price">$350</p>
+                   <button class="addtocart">Add To Cart</button>
+               </div>
+               <div class="product">
+                   <h3 class="productname">Vegan Cinnamon Roll Blondie</h3>
+                   <h3>Per Box 4</h3>
+                   <p class="price">$250</p>
+                   <button class="addtocart">Add To Cart</button>
+               </div>
+            </div>
+            <div class="container"> 
+                <div class="productcont">
+               <div class="product">
+                <h3 class="productname">8 PC Bundles</h3>
+                <p class="price">$5643</p>
+                <button class="addtocart">Add To Cart</button>
+            </div>
+               <div class="product">
+                   <h3 class="productname">12 PC Bundles</h3>
+                   <p class="price">$4565</p>
+                   <button class="addtocart">Add To Cart</button>
+               </div>
+               </div>
+               <div class="container"> 
+                   <div class="productcont">
+               <div class="product">
+                   <h3 class="productname">Party Packs</h3>
+                   <h3>Includes Browine & Blondies</h3>
+                   <p class="price">$8999</p>
+                   <button class="addtocart">Add To Cart</button>
+               </div>
+               <div class="product">
+                   <h3 class="productname">Tins</h3>
+                   <p class="price">$1000.00</p>
+                   <button class="addtocart">Add To Cart</button>
+               </div>
+               </div>
+               <div class="container"> 
+                <div class="productcont">
+            <div class="product">
+                <h3 class="productname">Chocolate browine Assorted</h3>
+                <h3>Per Box 20</h3>
+                <p class="price">$1449</p>
+                <button class="addtocart">Add To Cart</button>
+            </div>
+            <div class="product">
+                <h3 class="productname">Chocolate Blondie Assorted</h3>
+                <h3>Per Box 20</h3>
+                <p class="price">$1559</p>
+                <button class="addtocart">Add To Cart</button>
+            </div>
+            </div>
+               <div class="cart-container">
+                 <h2>Cart</h2>
+                 <table>
+                   <thead>
+                     <tr>
+                     <th><strong>Product</strong></th>
+                     <th><strong>Price</strong></th>
+                   </tr>
+                   </thead>
+                   <tbody id="carttable">
+                   </tbody>
+                 </table>
+                 <hr>
+                 <table id="carttotals">
+                   <tr>
+                     <td><strong>Items</strong></td>
+                     <td><strong>Total</strong></td>
+                   </tr>
+                   <tr>
+                     <td>x<span id="itemsquantity">0</span></td>
+                    
+                     <td>$<span id="total">0</span></td>
+                   </tr></table>
+       
+                   
+                 <div class="cart-buttons">  
+                   <button id="emptycart">Empty Cart</button>
+                   <button id="checkout">Checkout</button>
+                 </div>
+               </div>
+       </div>
+        </index>
+               <script  src="js/script.js"></script> 
+    <section class="contact" id="contact">
+        <div class="contact-box">
+            <h3>BLACK STONE BAKER'S</h3>
+            <span>Connect With Us</span>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook' ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </div>
+        <div class="contact-box">
+            <h3>Menu Links</h3>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#special">Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </div>
+        <div class="contact-box">
+            <h3>Quick Links</h3>
+            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#Privacy Policy">Privacy Policy</a></li>
+            <li><a href="#Disclaimer">Disclaimer</a></li>
+            <li><a href="#Terms Of Use">Terms Of Use</a></li>
+        </div>
+    </section>
+    <script>
+        // Navbar
+  let menu = document.querySelector('#menu-icon');
+  let navbar = document.querySelector('.navbar');
+
+  menu.onclick = () => {
+      navbar.classList.toggle('active');
+  }
+
+  window.onscroll = () => {
+      navbar.classList.remove('active');
+  }
+  // Dark Mode
+  let darkmode = document.querySelector('#darkmode');
+
+  darkmode.onclick = () => {
+      if(darkmode.classList.contains('bx-moon')){
+          darkmode.classList.replace('bx-moon','bx-sun');
+          document.body.classList.add('active');
+      }else{
+          darkmode.classList.replace('bx-sun','bx-moon');
+          document.body.classList.remove('active');
+      }
+  }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/CSS.css">
+<style>
+    body
+    {
+        padding-top: 150px;
+        padding-left: 600px;
+ 
+    }
+</style>
+<head>
+    <title>BLACK STONE BAKER'S</title>
+    <!-- Box Icons -->
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  
+
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <a href="index.html" class="logo">BLACK STONE BAKER'S</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <!-- Dark Mode -->
+            <div class="bx bx-moon" id="darkmode"></div>
+        </ul>
+    </header>
+         <h1>LOGIN</h1>
+        <p >Username</p>
+        <input type="text" id="Username">
+
+        <p>Password</p>
+
+        <input type="text" id="Password">
+
+        <br><button id="btn">submit</button></br>
+        <div id="result"></div>
+    <script>
+        // Navbar
+  let menu = document.querySelector('#menu-icon');
+  let navbar = document.querySelector('.navbar');
+
+  menu.onclick = () => {
+      navbar.classList.toggle('active');
+  }
+
+  window.onscroll = () => {
+      navbar.classList.remove('active');
+  }
+  // Dark Mode
+  let darkmode = document.querySelector('#darkmode');
+
+  darkmode.onclick = () => {
+      if(darkmode.classList.contains('bx-moon')){
+          darkmode.classList.replace('bx-moon','bx-sun');
+          document.body.classList.add('active');
+      }else{
+          darkmode.classList.replace('bx-sun','bx-moon');
+          document.body.classList.remove('active');
+      }
+  }
+  const ID={Username : "Glwec",Password : "Glwec@123"};
+    window.onload = () => {
+    let button = document.getElementById("btn");
+
+
+    button.addEventListener("click", submitT);
+};
+
+function submitT() {
+
+    
+    var U = document.querySelector("#Username").value;
+    
+    let P= document.querySelector("#Password").value;
+
+    let res = document.getElementById("result");
+
+    
+    if (U===ID.Username && P===ID.Password )
+    {
+        result.innerHTML = "LOGIN SUCCESSFUL!!";
+        document.getElementById("btn").addEventListener("click" , redirectfunction);
+        function redirectfunction()
+        {
+            window.location.href="index4.html";
+        }
+    }
+        else if(U === ID.Username && P !== ID.Password)
+        result.innerHTML="Invalid password!"
+        else if (U !== ID.Username && P=== ID.Password)
+        result.innerHTML="Invalid Username!"
+        else 
+        result.innerHTML="provide valid username and passsword!"
+
+    
+}
+
+    </script>
+</body>
+</html>
